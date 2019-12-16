@@ -25,7 +25,7 @@ function App() {
         <Navbar />
         <div className="container">
           <Switch>
-            <Route exact path="/" component={Profile}></Route>
+            <Route exact path="/portfolio_site" component={Profile}></Route>
             <Route exact path="/contact" component={Contact}></Route>  
           </Switch>  
 

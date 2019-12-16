@@ -10,7 +10,7 @@ const Navbar = ({ icon, title }) => {
       </h1>
       <ul>
         <li>
-          <Link to='/'>Profile</Link>
+          <Link to='/portfolio_site'>Profile</Link>
         </li>
         <li>
           <Link to='/contact'>Contact Me</Link>
