@@ -1,7 +1,8 @@
 import React, {Fragment} from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./Navbar";
-import Profile from "./Profile"
+import Profile from "./Profile";
+import Contact from "./Contact"
 import "./App.css";
 import {
   Box,
@@ -25,7 +26,7 @@ function App() {
         <div className="container">
           <Switch>
             <Route exact path="/" component={Profile}></Route>
-            {/* <Route exact path="/contact" component={Contact}></Route>   */}
+            <Route exact path="/contact" component={Contact}></Route>  
           </Switch>  
 
           
