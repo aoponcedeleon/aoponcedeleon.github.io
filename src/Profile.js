@@ -1,4 +1,6 @@
 import React, {Fragment} from 'react';
+import Skills from './Skills';
+import Projects from './Projects';
 import PropTypes from "prop-types";
 import "./App.css";
 import {
@@ -41,6 +43,9 @@ const Profile = () => {
           <div className='badge badge-success'>Hireable <i className='fas fa-check' /></div>
           <div className='badge badge-primary'>Freelance</div>
           <div className='badge badge-dark'>Part-time</div>
+          <div className='badge badge-dark'>Web Developer</div>
+          <div className='badge badge-dark'>Graphic Designer</div>
+          <div className='badge badge-dark'>Programmer</div>
           <Text className="lead" >BS Computer Science</Text>
           <Text className="lead" >University of The Philippines</Text>  
           <div>
@@ -63,8 +68,16 @@ const Profile = () => {
             <Box className="text-left two" px={5} py={6} color='white'>
                 <Text >I am a Philippines based Developer. I mainly have experience in Full-Stack Web Development and Game Development.</Text>
                 <br/>
+                <Text>I also have experience editing, handling, and managing the outputs and release of various publication designs for my school organizations (YES UP, CPS Triangle, UPLB Men's Basketball Team).</Text>
                 <Text >It's certainly a dream of mine to be part of web developers or game developers who emphasize the latest technologies and innovation while collaborating to the fullest extent</Text>
                 <br/>
+                <Text>
+                    I also like to play basketball and <em>a lot</em> of video games! I like to grind in CSGO, Dota, and LoL while also
+                    trying to play the latest AAA Games out there. Big fan of Basketball and I try to play as much with my friends there as possible! 
+                    I am also naturally inclined to my team so whatever criticisms or help I may get or give, I understand that it is for the shared goal 
+                    of the team that I am in. Given this, I also try to soak in all the learnings I can in a certain environment as possible!
+                </Text>
+                <br />
                 <Text className="lead">Contact</Text>
                 <Text>aoponcedeleon@up.edu.ph | allenpdl75@gmail.com</Text>
                 <Text>+639771037244</Text>
@@ -104,58 +117,9 @@ const Profile = () => {
             </Box> 
         </Box>
       </div>
-
-
-      <div className="fullPage">
-      <div className="large text-center p-3">Skills and Programming Languages</div>
-      <div style={{
-        backgroundColor:'#f4f4f4',
-        display: "grid",
-        gridTemplateColumns: "repeat(4,1fr)",
-        gridGap: "1rem"
-        }}>
-        
-        <div className="card text-center">
-            <i className="fab fa-react fa-7x"></i>
-            <h1>ReactJS</h1>
-            <Text>along with Redux/Context API and other component libraries</Text>
-        </div>
-        <div className="card text-center">
-            <i className="fab fa-html5 fa-7x"></i>
-            <h1>HTML5</h1>
-        </div>
-        <div className="card text-center">
-            <i className="fab fa-css3-alt fa-7x"></i>
-            <h1>CSS3</h1>
-        </div>
-        <div className="card text-center">
-            <i className="fab fa-js fa-7x"></i>
-            <h1>JavaScript</h1>
-        </div>
-        <div className="card text-center">
-            <i className="fab fa-java fa-7x"></i>
-            <h1>Java</h1>
-            <Text>with main experience in Game Development and Solver Applications (Netbeans/Vanilla Java)</Text>
-        </div>
-        
-        <div className="card text-center">
-            <i className="fab fa-python fa-7x"></i>
-            <h1>Python</h1>
-            <Text>main experience being AI Solutions and Applications</Text>
-        </div>
-        <div className="card text-center">
-            <i className="far fa-registered fa-7x"></i>
-            <h1>RStudio</h1>
-            <Text>main experience being Data Problem Solvers (Regression, Spline Interpolation, Simplex Solver, etc.)</Text>
-        </div>
-        <div className="card text-center">
-            <i className="fab fa-adobe fa-7x"></i>
-            <h1>Photoshop | Premiere</h1>
-            <Text>Experience in creating Publications and Videos for the public relations</Text>
-        </div>
-
-      </div>
-      </div>
+      <Skills />
+      <Projects />
+      
     </Fragment>
 
   );

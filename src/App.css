@@ -28,6 +28,15 @@ a {
   text-decoration: none;
 }
 
+.on-white {
+  color: #333333;
+  text-decoration: none;
+} 
+
+.on-white:hover {
+  color: #ccc;
+}
+
 a:hover {
   color: #666;
 }
@@ -445,6 +454,10 @@ table th {
 
 .fullPage {
   height: 100vh;
+}
+
+.footer {
+  height: 16vh;
 }
 
 .one {
