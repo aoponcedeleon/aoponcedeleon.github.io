@@ -23,7 +23,7 @@ const Profile = () => {
         sx={{
             px: 3,
             py: 5,
-            backgroundImage: 'url(https://source.unsplash.com/random/1920x1080?stars)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1484950763426-56b5bf172dbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2050&q=80)',
             backgroundSize: 'cover',
             color: 'white',
             bg: 'gray',
@@ -61,7 +61,7 @@ const Profile = () => {
         >
             <Text className="large text-right" px={3} py={6} color="white"><i className="fas fa-info-circle" />   About Me</Text>
             <Box className="text-left two" px={5} py={6} color='white'>
-                <Text >I am a Philippines based Developer. I mainly have experience in Front-end Development and Full-Stack as well.</Text>
+                <Text >I am a Philippines based Developer. I mainly have experience in Full-Stack Web Development and Game Development.</Text>
                 <br/>
                 <Text >It's certainly a dream of mine to be part of web developers or game developers who emphasize the latest technologies and innovation while collaborating to the fullest extent</Text>
                 <br/>
@@ -70,6 +70,38 @@ const Profile = () => {
                 <Text>+639771037244</Text>
             </Box>
             
+        </Box>
+      </div>
+
+
+      <div style={{backgroundColor:'#f4f4f4'}}>
+        <Box
+            sx={{
+            display: 'grid',
+            gridGap: 1,
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gridAutoRow: 'auto',
+            }}
+        >
+            <Text className="lead text-right one" px={3} py={4} my={3} color="#333333"><i className="fas fa-user-graduate" />   Education</Text>
+            <Box className="text-left two" px={5} py={4} my={3} color='#333333'>
+                <Text className='lead'>College</Text>
+                <Text className='text-dark'>University of The Philippines Los Banos</Text>
+                <Text className='text-dark'><em>BS Computer Science</em> ● 2015 - Present</Text>
+                <Text>Mainly crafted majority of my portfolio in my stay in UP. The university taught us not only one major of software development, but gave us fundamentals in different disciplines such as Game Development, Web Development, Data Science, etc.</Text>
+                <br/>
+                <Text className='lead'>High School</Text>
+                <Text className='text-dark'>Rogationist College</Text>
+                <Text className='text-dark'>2012 - 2015</Text>
+                <Text>Coding courses in high school were mostly the basics. I had to study on my own if I had to get deeper knowledge about development at this point.</Text>
+            </Box>  
+            <Text className="lead text-right" px={3} py={4} my={3} color="#333333"><i className="fas fa-briefcase" />   Work</Text> 
+            <Box className="text-left four" px={5} py={4} my={3} color='#333333'>
+                <Text className='lead'>Chatbot PH</Text>
+                <Text className='text-dark'><em>Full Stack Developer Intern</em> ● June 2019 - July 2019</Text>
+                <Text className='text-dark'>Mainly dove into tasks relating to Front-End Development but also were given Back-End tasks. Also learned a significant amount about implementing chatbots</Text><br/>
+                <Text className='text-dark'>Deepened my knowledge in ReactJS, Redux, Context API, Python, Messenger API for Chatbots</Text>
+            </Box> 
         </Box>
       </div>
     </Fragment>

@@ -448,9 +448,12 @@ table th {
 }
 
 .one {
-  grid-column: 3;
-  grid-row: 1;
+  grid-area: 1/1/1/1
 }
 .two { 
   grid-area: 1/2/2/4
+}
+
+.four {
+  grid-area: 2/2/3/4
 }
