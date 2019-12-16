@@ -16,16 +16,15 @@ const twitterDest = 'https://twitter.com/allenponsiii';
 const facebookDest = 'https://www.facebook.com/allen.p.deleon/';
 
 
-
 const Profile = () => {
   return (
-    <Box
+    <Fragment>
+        <Box
         sx={{
             px: 3,
             py: 5,
             backgroundImage: 'url(https://source.unsplash.com/random/1920x1080?stars)',
             backgroundSize: 'cover',
-            borderRadius: 8,
             color: 'white',
             bg: 'gray',
             
@@ -52,6 +51,29 @@ const Profile = () => {
         </div>
         </Flex>
       </Box>
+      <div style={{backgroundColor:'#333333'}}>
+        <Box
+            sx={{
+            display: 'grid',
+            gridGap: 1,
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            }}
+        >
+            <Text className="large text-right" px={3} py={6} color="white"><i className="fas fa-info-circle" />   About Me</Text>
+            <Box className="text-left two" px={5} py={6} color='white'>
+                <Text >I am a Philippines based Developer. I mainly have experience in Front-end Development and Full-Stack as well.</Text>
+                <br/>
+                <Text >It's certainly a dream of mine to be part of web developers or game developers who emphasize the latest technologies and innovation while collaborating to the fullest extent</Text>
+                <br/>
+                <Text className="lead">Contact</Text>
+                <Text>aoponcedeleon@up.edu.ph | allenpdl75@gmail.com</Text>
+                <Text>+639771037244</Text>
+            </Box>
+            
+        </Box>
+      </div>
+    </Fragment>
+
   );
 }
 
