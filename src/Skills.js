@@ -12,7 +12,7 @@ import {
 const Skills =()=> {
     return(
         <Fragment>
-            <div>
+            <div id="skills">
             <div className="large text-center p-3">Skills and Programming Languages</div>
              <div style={{
             backgroundColor:'#f4f4f4',

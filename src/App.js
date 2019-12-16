@@ -26,11 +26,11 @@ function App() {
         <div className="container">
           <Switch>
             <Route exact path="/portfolio_site" component={Profile}></Route>
-            <Route exact path="/contact" component={Contact}></Route>  
           </Switch>  
-
-          
         </div>
+
+
+
         <div className="footer" style={{backgroundColor:'#333333'}}>
             <Flex className="all-center" p={4}> 
             <div className="text-center" >
@@ -39,7 +39,7 @@ function App() {
               <a href={facebookDest} ><i className="fab fa-facebook-f p" /></a>
             </div>
             <Text color="#f4f4f4" style={{fontSize: 13}}> (c) Copyright 2019 Allen O. Ponce de Leon </Text>  
-              
+            <Text color="#f4f4f4" style={{fontSize: 13}}> E-mail me at aoponcedeleon@up.edu.ph for any inquiries or questions!</Text>   
             </Flex>    
               
           </div> 

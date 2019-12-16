@@ -15,7 +15,7 @@ const githubFinderLink = "https://github-finder371.netlify.com/";
 const Projects =()=> {
     return(
         <Fragment>
-            <div>
+            <div id="projects">
             <div className="large text-center p-3">Projects</div>
              <div style={{
             backgroundColor:'#f4f4f4',

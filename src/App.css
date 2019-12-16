@@ -54,7 +54,7 @@ img {
   max-width: 100%;
   margin: auto;
   overflow: hidden;
-  padding: 0 0.5rem;
+  padding: 3rem 0rem;
 }
 
 /* Text Styles*/
@@ -218,6 +218,11 @@ img {
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+}
+
+.clickable {
+  color: #f4f4f4;
+  cursor: pointer;
 }
 
 .btn-link {
@@ -385,13 +390,14 @@ table th {
 
 /* Navbar */
 .navbar {
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.7rem 2rem;
   z-index: 1;
   width: 100%;
-  opacity: 0.9;
+  opacity: 1;
   margin-bottom: 1rem;
 }
 

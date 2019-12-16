@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
 import Skills from './Skills';
 import Projects from './Projects';
+import ScrollAnimation from 'react-animate-on-scroll';
 import PropTypes from "prop-types";
 import "./App.css";
 import {
@@ -25,7 +26,7 @@ const Profile = () => {
         sx={{
             px: 3,
             py: 5,
-            backgroundImage: 'url(https://images.unsplash.com/photo-1484950763426-56b5bf172dbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2050&q=80)',
+            backgroundImage: 'url(https://images.unsplash.com/20/dusty-sky.JPG?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2053&q=80)',
             backgroundSize: 'cover',
             color: 'white',
             bg: 'gray',
@@ -33,12 +34,14 @@ const Profile = () => {
         }}
         >
         <Flex className="all-center">
+        
+        <div className="card text-center" id="profile">
         <Image src={avatarDest} variant='avatar' sx={{
-            width: '10rem',
-            height: '10rem',
-            borderRadius: '100%'
+            width: '15rem',
+            height: '15rem',
+            borderRadius: '100%',
+            margin: '1.5rem 0rem'
         }}/>
-        <div className="card text-center">
           <Text className="large p-1">Allen O. Ponce de Leon</Text>
           <div className='badge badge-success'>Hireable <i className='fas fa-check' /></div>
           <div className='badge badge-primary'>Freelance</div>
@@ -46,8 +49,10 @@ const Profile = () => {
           <div className='badge badge-dark'>Web Developer</div>
           <div className='badge badge-dark'>Graphic Designer</div>
           <div className='badge badge-dark'>Programmer</div>
-          <Text className="lead" >BS Computer Science</Text>
-          <Text className="lead" >University of The Philippines</Text>  
+          <Text p={2}><em>BS Computer Science</em> ● University of The Philippines</Text>
+          <Text p={2}>Affiliations</Text>
+          <div className='badge badge-primary'>YES-UP</div>
+          <div className='badge badge-dark'>The CPS Triangle</div>
           <div>
             <a href={githubDest} ><i className="fab fa-github fa-2x p" /></a>
             <a href={twitterDest} ><i className="fab fa-twitter fa-2x p" /></a>
@@ -56,7 +61,8 @@ const Profile = () => {
         </div>
         </Flex>
       </Box>
-      <div style={{backgroundColor:'#333333'}}>
+      
+      <div style={{backgroundColor:'#333333'}} id="about">
         <Box
             sx={{
             display: 'grid',
@@ -64,7 +70,7 @@ const Profile = () => {
             gridTemplateColumns: 'repeat(3, 1fr)',
             }}
         >
-            <Text className="large text-right" px={3} py={6} color="white"><i className="fas fa-info-circle" />   About Me</Text>
+            <Text className="large text-right " px={3} py={6} color="white"><i className="fas fa-info-circle" />   About Me</Text>
             <Box className="text-left two" px={5} py={6} color='white'>
                 <Text >I am a Philippines based Developer. I mainly have experience in Full-Stack Web Development and Game Development.</Text>
                 <br/>
@@ -79,7 +85,7 @@ const Profile = () => {
                 </Text>
                 <br />
                 <Text className="lead">Contact</Text>
-                <Text>aoponcedeleon@up.edu.ph | allenpdl75@gmail.com</Text>
+                <Text>aoponcedeleon@up.edu.ph</Text>
                 <Text>+639771037244</Text>
             </Box>
             
@@ -87,7 +93,8 @@ const Profile = () => {
       </div>
 
 
-      <div style={{backgroundColor:'#f4f4f4'}}>
+      <ScrollAnimation animateIn="fadeIn" duration="1.8">     
+      <div style={{backgroundColor:'#f4f4f4'}} id="education">
         <Box
             sx={{
             display: 'grid',
@@ -117,8 +124,9 @@ const Profile = () => {
             </Box> 
         </Box>
       </div>
-      <Skills />
-      <Projects />
+      </ScrollAnimation> 
+      <ScrollAnimation animateIn="fadeIn" duration="1.8"><Skills /></ScrollAnimation>      
+      <ScrollAnimation animateIn="fadeIn" duration="1.8"><Projects /></ScrollAnimation>
       
     </Fragment>
 
