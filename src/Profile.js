@@ -104,6 +104,58 @@ const Profile = () => {
             </Box> 
         </Box>
       </div>
+
+
+      <div className="fullPage">
+      <div className="large text-center p-3">Skills and Programming Languages</div>
+      <div style={{
+        backgroundColor:'#f4f4f4',
+        display: "grid",
+        gridTemplateColumns: "repeat(4,1fr)",
+        gridGap: "1rem"
+        }}>
+        
+        <div className="card text-center">
+            <i className="fab fa-react fa-7x"></i>
+            <h1>ReactJS</h1>
+            <Text>along with Redux/Context API and other component libraries</Text>
+        </div>
+        <div className="card text-center">
+            <i className="fab fa-html5 fa-7x"></i>
+            <h1>HTML5</h1>
+        </div>
+        <div className="card text-center">
+            <i className="fab fa-css3-alt fa-7x"></i>
+            <h1>CSS3</h1>
+        </div>
+        <div className="card text-center">
+            <i className="fab fa-js fa-7x"></i>
+            <h1>JavaScript</h1>
+        </div>
+        <div className="card text-center">
+            <i className="fab fa-java fa-7x"></i>
+            <h1>Java</h1>
+            <Text>with main experience in Game Development and Solver Applications (Netbeans/Vanilla Java)</Text>
+        </div>
+        
+        <div className="card text-center">
+            <i className="fab fa-python fa-7x"></i>
+            <h1>Python</h1>
+            <Text>main experience being AI Solutions and Applications</Text>
+        </div>
+        <div className="card text-center">
+            <i className="far fa-registered fa-7x"></i>
+            <h1>RStudio</h1>
+            <Text>main experience being Data Problem Solvers (Regression, Spline Interpolation, Simplex Solver, etc.)</Text>
+        </div>
+        <div className="card text-center">
+            <i className="fab fa-adobe fa-7x"></i>
+            <h1>Photoshop | Premiere</h1>
+            <Text>Experience in creating Publications and Videos for the public relations</Text>
+        </div>
+
+      </div>
+      </div>
     </Fragment>
 
   );
