@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:800&display=swap');
 
 /* Global Styles */
 :root {
@@ -21,6 +22,9 @@ body {
   line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
+}
+.name-strong {
+  font-family: 'Open Sans', sans-serif;
 }
 
 a {

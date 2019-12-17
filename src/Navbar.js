@@ -10,7 +10,7 @@ const Navbar = ({ icon, title }) => {
       </h1>
       
       <ul>
-        <Link style={{color:'tomato'}}>Site not yet optimized for mobile</Link>
+        {/* <Link style={{color:'tomato'}}>Site not yet optimized for mobile</Link> */}
         <Link
             activeClass="active"
             to="profile"

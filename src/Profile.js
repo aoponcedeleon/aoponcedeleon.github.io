@@ -35,14 +35,14 @@ const Profile = () => {
         >
         <Flex className="all-center">
         
-        <div className="card text-center" id="profile">
+        <div className="text-center" id="profile">
         <Image src={avatarDest} variant='avatar' sx={{
             width: '15rem',
             height: '15rem',
             borderRadius: '100%',
             margin: '1.5rem 0rem'
         }}/>
-          <Text className="large p-1">Allen O. Ponce de Leon</Text>
+          <Text className="x-large p-1 name-strong"><strong>Allen Ponce de Leon</strong></Text>
           <div className='badge badge-success'>Hireable <i className='fas fa-check' /></div>
           <div className='badge badge-primary'>Freelance</div>
           <div className='badge badge-dark'>Part-time</div>
