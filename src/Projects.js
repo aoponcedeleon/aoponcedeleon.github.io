@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react';
 import "./App.css";
+import BG from './bg1.svg'
 import {
   Box,
   Card,
@@ -9,16 +10,32 @@ import {
   Flex
 } from 'rebass';
 
+
+import WebDev from './webdev1.svg';
+
 const devConLink = "https://tranquil-dusk-99466.herokuapp.com/";
 const githubFinderLink = "https://github-finder371.netlify.com/";
 
 const Projects =()=> {
     return(
-        <Fragment>
+        <Fragment >
             <div id="projects">
-            <div className="large text-center p-3">Projects</div>
-             <div style={{
-            backgroundColor:'#f4f4f4',
+            <Flex sx={{bg: "#c4c4c4"}}>
+                <Box m={5} width={1/2}>
+                <img style={{width:'75%',height:'80%',margin: '2rem', float:'right'}}src={WebDev} alt="WEb Dev"></img>
+                </Box>
+                <Box p={3} width={2/3} sx={{textAlign:'center', margin: 'auto'}}>
+                <div className="text-left">
+                <Text className="x-large p-1 name-strong"><strong>Projects</strong></Text>
+                <Text className="p-1 lead">Check out some of my designs and projects so far!<br/> Contact me now and let's collaborate on a new project!</Text>
+                </div>
+
+                </Box>
+                
+            </Flex>
+            <img src={BG} alt="BG"></img>
+            
+            <div style={{
             display: "grid",
             gridTemplateColumns: "repeat(4,1fr)",
             gridGap: "1rem"

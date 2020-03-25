@@ -22,7 +22,7 @@ const facebookDest = 'https://www.facebook.com/allen.p.deleon/';
 const Profile = () => {
   return (
     <Fragment>
-        <Box
+        <Flex
         sx={{
             px: 3,
             py: 5,
@@ -33,34 +33,47 @@ const Profile = () => {
             
         }}
         >
-        <Flex className="all-center">
-        
-        <div className="text-center" id="profile">
-        <Image src={avatarDest} variant='avatar' sx={{
-            width: '15rem',
-            height: '15rem',
-            borderRadius: '100%',
-            margin: '1.5rem 0rem'
-        }}/>
-          <Text className="x-large p-1 name-strong"><strong>Allen Ponce de Leon</strong></Text>
+          <Box p={3} width={1/3} sx={{textAlign:'center'}}>
+            <Image src={avatarDest} variant='avatar' sx={{
+                width: '13rem',
+                height: '13rem',
+                borderRadius: '100%',
+                margin: '1.5rem 3rem',
+                float: 'right'
+            }}/>
+          </Box>
+          <Box p={3} width={2/3} sx={{textAlign:'center', margin: 'auto'}}>
+          <div className="text-left" id="profile">
+          <Text className="x-large p-1 name-strong"><strong>
+            <div className="outer">
+              Hi I'm 
+                <div className="inner">
+                  <span>
+                    a Web Developer.<br></br>
+                    a Web Designer.<br></br>
+                    a Student.<br></br>
+                    Allen.
+                  </span>
+                </div>
+            </div>
+            
+            
+            </strong></Text>
           <div className='badge badge-success'>Hireable <i className='fas fa-check' /></div>
           <div className='badge badge-primary'>Freelance</div>
-          <div className='badge badge-dark'>Part-time</div>
           <div className='badge badge-dark'>Web Developer</div>
-          <div className='badge badge-dark'>Graphic Designer</div>
+          <div className='badge badge-dark'>Web Designer</div>
           <div className='badge badge-dark'>Programmer</div>
-          <Text p={2}><em>BS Computer Science</em> ● University of The Philippines</Text>
-          <Text p={2}>Affiliations</Text>
-          <div className='badge badge-primary'>YES-UP</div>
-          <div className='badge badge-dark'>The CPS Triangle</div>
+          <Text p={2}><em>BS Computer Science</em> &nbsp; ● &nbsp; University of The Philippines</Text>
           <div>
             <a href={githubDest} ><i className="fab fa-github fa-2x p" /></a>
             <a href={twitterDest} ><i className="fab fa-twitter fa-2x p" /></a>
             <a href={facebookDest} ><i className="fab fa-facebook-f fa-2x p" /></a>
           </div>
         </div>
-        </Flex>
-      </Box>
+          </Box>
+        
+      </Flex>
       
       <div style={{backgroundColor:'#333333'}} id="about">
         <Box
