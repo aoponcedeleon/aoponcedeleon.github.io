@@ -2,16 +2,14 @@ import React, {Fragment} from 'react';
 import Skills from './Skills';
 import Projects from './Projects';
 import ScrollAnimation from 'react-animate-on-scroll';
-import PropTypes from "prop-types";
 import "./App.css";
 import {
   Box,
-  Card,
   Image,
-  Heading,
   Text,
   Flex
 } from 'rebass';
+
 
 const avatarDest = "https://avatars2.githubusercontent.com/u/28593720?s=400&u=99b29f4ebeb377b6275c7847b3dd69de3fdd1137&v=4";
 const githubDest = "https://github.com/aoponcedeleon";
@@ -30,31 +28,45 @@ const Profile = () => {
             backgroundSize: 'cover',
             color: 'white',
             bg: 'gray',
+            flexWrap:'wrap'
             
         }}
         >
-          <Box p={3} width={1/3} sx={{textAlign:'center'}}>
+          <Box p={2} width={[1,1/3]} sx={{
+            textAlign: 'right',
+            '@media screen and (max-width: 666px)': {
+              float: 'none',
+              textAlign: 'center',
+            }
+          }}>
             <Image src={avatarDest} variant='avatar' sx={{
-                width: '13rem',
-                height: '13rem',
+                width: '40%',
+                height: 'auto',
                 borderRadius: '100%',
-                margin: '1.5rem 3rem',
-                float: 'right'
+                margin: '1rem .5rem',
+                '@media screen and (max-width: 666px)': {
+                  width: '50%',
+                  margin: '1rem .5rem'
+                },
+
+                '@media screen and (max-width: 900px)': {
+                  width: '70%',
+                  margin: '1rem .5rem'
+                }
             }}/>
           </Box>
-          <Box p={3} width={2/3} sx={{textAlign:'center', margin: 'auto'}}>
-          <div className="text-left" id="profile">
+          <Box p={2} width={[1,2/3]} sx={{
+            margin: 'auto',
+            textAlign: 'left',
+            '@media screen and (max-width: 666px)': {
+              textAlign: 'center'
+            }
+            
+            }}>
+          <div id="profile">
           <Text className="x-large p-1 name-strong"><strong>
-            <div className="outer">
-              Hi I'm 
-                <div className="inner">
-                  <span>
-                    a Web Developer.<br></br>
-                    a Web Designer.<br></br>
-                    a Student.<br></br>
-                    Allen.
-                  </span>
-                </div>
+            <div>
+              Hi, I'm Allen!
             </div>
             
             
@@ -75,16 +87,27 @@ const Profile = () => {
         
       </Flex>
       
-      <div style={{backgroundColor:'#333333'}} id="about">
-        <Box
-            sx={{
-            display: 'grid',
-            gridGap: 1,
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            }}
-        >
-            <Text className="large text-right " px={3} py={6} color="white"><i className="fas fa-info-circle" />   About Me</Text>
-            <Box className="text-left two" px={5} py={6} color='white'>
+      <div className='about-section' id="about">
+        <Flex mx={-3} flexWrap='wrap'>
+            <Box px={2} py={[5,5]} my={3} width={[1,1/3]} height={2}  color="white" sx={{
+              fontSize: '3rem',
+              lineHeight: '1.2',
+              marginBottom: '1rem',
+              textAlign: 'center'
+            }}>
+              <Text sx={{
+              textAlign: 'right',
+              '@media screen and (max-width: 666px)': {
+                textAlign: 'center'
+              }
+            }}> About Me</Text>
+            </Box>
+            <Box className="two" px={5} py={[1,4]} my={[1,4]} width={[1,2/3]}  color='white' sx={{
+              textAlign: 'left',
+              '@media screen and (max-width: 666px)': {
+                textAlign: 'center'
+              }
+            }}>
                 <Text >I am a Philippines based Developer. I mainly have experience in Full-Stack Web Development and Game Development.</Text>
                 <br/>
                 <Text>I also have experience editing, handling, and managing the outputs and release of various publication designs for my school organizations (YES UP, CPS Triangle, UPLB Men's Basketball Team).</Text>
@@ -100,24 +123,42 @@ const Profile = () => {
                 <Text className="lead">Contact</Text>
                 <Text>aoponcedeleon@up.edu.ph</Text>
                 <Text>+639771037244</Text>
+                <br />
+                <br />
+                
             </Box>
             
-        </Box>
+            
+        </Flex>
+      {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <polygon fill="#f4f4f4" points="0,100 100,0 100,100"/>
+      </svg> */}
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <polygon class="svg--sm" fill="#f4f4f4" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100"/>
+        <polygon class="svg--lg" fill="#f4f4f4" points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100" />
+      </svg>
       </div>
+      
 
 
       <ScrollAnimation animateIn="fadeIn" duration="1.8">     
       <div style={{backgroundColor:'#f4f4f4'}} id="education">
-        <Box
-            sx={{
-            display: 'grid',
-            gridGap: 1,
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gridAutoRow: 'auto',
-            }}
+        <Flex
+           flexWrap='wrap' 
         >
-            <Text className="lead text-right one" px={3} py={4} my={3} color="#333333"><i className="fas fa-user-graduate" />   Education</Text>
-            <Box className="text-left two" px={5} py={4} my={3} color='#333333'>
+            <Text className="lead text-right one" px={3} py={4} my={3} color="#333333" width={[1,1/3]} sx={{
+              '@media screen and (max-width: 666px)': {
+                textAlign: 'center',
+                fontSize: '3rem'
+              }
+
+            }}><i className="fas fa-user-graduate" />   Education</Text>
+            <Box className="text-left two" px={5} py={3} my={4} color='#333333' width={[1,2/3]} sx={{
+              '@media screen and (max-width: 666px)': {
+                textAlign: 'left'
+              }
+            }}>
                 <Text className='lead'>College</Text>
                 <Text className='text-dark'>University of The Philippines Los Banos</Text>
                 <Text className='text-dark'><em>BS Computer Science</em> ● 2015 - Present</Text>
@@ -128,14 +169,19 @@ const Profile = () => {
                 <Text className='text-dark'>2012 - 2015</Text>
                 <Text>Coding courses in high school were mostly the basics. I had to study on my own if I had to get deeper knowledge about development at this point.</Text>
             </Box>  
-            <Text className="lead text-right" px={3} py={4} my={3} color="#333333"><i className="fas fa-briefcase" />   Work</Text> 
-            <Box className="text-left four" px={5} py={4} my={3} color='#333333'>
+            <Text className="lead text-right" px={3} py={4} my={3} color="#333333" width={[1,1/3]} sx={{
+              '@media screen and (max-width: 666px)': {
+                textAlign: 'center',
+                fontSize: '3rem'
+              }
+            }}><i className="fas fa-briefcase" />   Work</Text> 
+            <Box className="text-left four" px={5} py={4} my={3} color='#333333' width={[1,2/3]}>
                 <Text className='lead'>Chatbot PH</Text>
                 <Text className='text-dark'><em>Full Stack Developer Intern</em> ● June 2019 - July 2019</Text>
                 <Text className='text-dark'>Mainly dove into tasks relating to Front-End Development but also were given Back-End tasks. Also learned a significant amount about implementing chatbots</Text><br/>
                 <Text className='text-dark'>Deepened my knowledge in ReactJS, Redux, Context API, Python, Messenger API for Chatbots</Text>
             </Box> 
-        </Box>
+        </Flex>
       </div>
       </ScrollAnimation> 
       <ScrollAnimation animateIn="fadeIn" duration="1.8"><Skills /></ScrollAnimation>      

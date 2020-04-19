@@ -2,13 +2,9 @@ import React, {Fragment} from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./Navbar";
 import Profile from "./Profile";
-import Contact from "./Contact"
+
 import "./App.css";
 import {
-  Box,
-  Card,
-  Image,
-  Heading,
   Text,
   Flex,
 } from 'rebass';
