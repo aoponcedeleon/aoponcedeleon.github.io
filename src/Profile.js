@@ -3,13 +3,16 @@ import Skills from './Skills';
 import Projects from './Projects';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "./App.css";
+import Modal from 'react-modal';
 import {
   Box,
   Image,
   Text,
   Flex
 } from 'rebass';
+import ContactForm from './ContactForm';
 
+Modal.setAppElement('#root')
 
 const avatarDest = "https://avatars2.githubusercontent.com/u/28593720?s=400&u=99b29f4ebeb377b6275c7847b3dd69de3fdd1137&v=4";
 const githubDest = "https://github.com/aoponcedeleon";
@@ -18,8 +21,9 @@ const facebookDest = 'https://www.facebook.com/allen.p.deleon/';
 
 
 const Profile = () => {
+  const [modalIsOpen, setModalIsOpen] = React.useState(false);
   return (
-    <Fragment>
+    <Fragment className='body-content'>
         <Flex
         sx={{
             px: 3,
@@ -50,7 +54,7 @@ const Profile = () => {
                 },
 
                 '@media screen and (max-width: 900px)': {
-                  width: '70%',
+                  width: '50%',
                   margin: '1rem .5rem'
                 }
             }}/>
@@ -120,7 +124,32 @@ const Profile = () => {
                     of the team that I am in. Given this, I also try to soak in all the learnings I can in a certain environment as possible!
                 </Text>
                 <br />
-                <Text className="lead">Contact</Text>
+                <div className="btn" onClick={() => setModalIsOpen(true)}>
+                  Contact
+                </div>
+                <Modal closeTimeoutMS={400} isOpen={modalIsOpen} shouldCloseOnOverlayClick={false} onRequestClose={() => setModalIsOpen(false)}
+                  style={{
+                    overlay: {
+                      backgroundColor: 'grey'
+                    },
+                    content : {
+                      top                   : '50%',
+                      left                  : '50%',
+                      right                 : 'auto',
+                      bottom                : 'auto',
+                      width: '75%',
+                      marginRight           : '-50%',
+                      transform             : 'translate(-50%, -50%)'
+                    }
+                  }}
+                >
+                  <div className='btn btn-danger' style={{float: 'right', top: '0'}} onClick={() => setModalIsOpen(false)}>
+                  &times; </div>
+                  <ContactForm />
+                  <br/>
+                  
+                </Modal>
+                <Text className="lead">Details:</Text>
                 <Text>aoponcedeleon@up.edu.ph</Text>
                 <Text>+639771037244</Text>
                 <br />

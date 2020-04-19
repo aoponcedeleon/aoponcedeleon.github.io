@@ -6,7 +6,6 @@ import {
   Flex
 } from 'rebass';
 
-
 import WebDev from './webdev1.svg';
 
 const devConLink = "https://tranquil-dusk-99466.herokuapp.com/";
@@ -19,7 +18,8 @@ const Projects =()=> {
             <Flex flexWrap='wrap' sx={{
                 textAlign: 'center',
                 width: '65%',
-                margin: 'auto'
+                margin: 'auto',
+                
             }}>
                 <Box px={2} py={3} my={5} width={[1,1/3]}>
                     <img style={{
@@ -48,15 +48,15 @@ const Projects =()=> {
             <Flex flexWrap='wrap' sx={{
                 textAlign: 'center',
                 width: '85%',
-                margin: 'auto'
+                margin: 'auto',
+                boxShadow: '6px 6px 15px #888888'
             }}>
             
             <Box px={2} py={2} className="card text-center" width={[1, 1/2,  1/3]} >
                 <i className="fas fa-terminal fa-7x"></i>
                 <h1><a className="on-white" href={devConLink}>DevConnector</a></h1>
                 <br />
-                <Text>Fully functioning sort of social media for Developers to stay connected.</Text>
-                <Text>Implemented with ReactJS with Redux, NodeJS together with MongoDB</Text>
+                <Text>Fully functioning sort of social media for Developers to stay connected. Implemented with ReactJS with Redux, NodeJS together with MongoDB</Text>
                 <a className="on-white text-success" href="https://github.com/aoponcedeleon/backtofront">Github Link</a>
             </Box>
             <Box px={2} py={2} className="card text-center" width={[1, 1/2,  1/3]} >

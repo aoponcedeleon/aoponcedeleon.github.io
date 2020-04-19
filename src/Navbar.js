@@ -2,15 +2,17 @@ import React from 'react';
 import PropTypes from "prop-types";
 import { Link } from "react-scroll";
 import "./App.css";
+import {
+  Text
+} from 'rebass';
 const Navbar = ({ icon, title }) => {
   return (
-    <nav className='navbar bg-dark'>
-      <h1>
+    <div className='navbar bg-dark'>
+      <Text className='lead'>
         <i className={icon} /> {title}
-      </h1>
+      </Text>
       
       <ul>
-        {/* <Link style={{color:'tomato'}}>Site not yet optimized for mobile</Link> */}
         <Link
             activeClass="active"
             to="profile"
@@ -18,7 +20,7 @@ const Navbar = ({ icon, title }) => {
             smooth={true}
             offset={-120}
             duration= {500}
-            className="clickable"
+            className="clickable "
         >Profile</Link>
         <Link
             activeClass="active"
@@ -57,7 +59,7 @@ const Navbar = ({ icon, title }) => {
             className="clickable"
         >Projects</Link>
       </ul>
-    </nav>
+    </div>
   );
 }
 
