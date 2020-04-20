@@ -163,9 +163,14 @@ const Profile = () => {
         <polygon fill="#f4f4f4" points="0,100 100,0 100,100"/>
       </svg> */}
 
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+      {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
         <polygon class="svg--sm" fill="#f4f4f4" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100"/>
         <polygon class="svg--lg" fill="#f4f4f4" points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100" />
+      </svg> */}
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio='none'>
+        <path fill="#f3f3f3" fill-opacity="1" d="M0,224L80,229.3C160,235,320,245,480,224C640,203,800,149,960,138.7C1120,128,1280,160,1360,176L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+        </path>
       </svg>
       </div>
       
