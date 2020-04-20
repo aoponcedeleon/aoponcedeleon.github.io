@@ -59,11 +59,12 @@ const Profile = () => {
                 }
             }}/>
           </Box>
-          <Box p={2} width={[1,2/3]} sx={{
+          <Box px={5} width={[1,2/3]} sx={{
             margin: 'auto',
             textAlign: 'left',
             '@media screen and (max-width: 666px)': {
-              textAlign: 'center'
+              textAlign: 'center',
+              p:'2'
             }
             
             }}>
